@@ -1,0 +1,27 @@
+.iconblue{
+    width:30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    margin:2px;
+  }
+  .icongreen{
+    width:30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+    margin:2px;
+  }
+
+  .circle {
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    padding: 4px;
+    background: #fff;
+    border: 3px solid #000;
+    color: #000;
+    text-align: center;
+    background-color: rgb(159, 240, 159);
+    font: 32px Arial, sans-serif;
+  }

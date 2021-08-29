@@ -1,0 +1,111 @@
+
+<h2 style="text-align: center;">Here we show the list of Previous test and updated test</h2>
+
+<!-- Adding bootstrap card-->
+ <!-- <div class="container">
+<div class="card" style="width:300px; display: inline-block;padding: 10px;margin:10px">
+    <img class="card-img-top" src="assets/images/events/1.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+  <div class="card" style="width:300px;display: inline-block;padding: 10px;margin:10px">
+    <img class="card-img-top" src="assets/images/events/2.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+  <div class="card" style="width:300px; display: inline-block;padding: 10px;margin:10px">
+    <img class="card-img-top" src="assets/images/events/3.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+  
+  
+</div> -->
+
+<!--Load Quiz section previous and upcoming-->
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+      <!-- <h3 class="mt20">Available Quizzes</h3> -->
+
+      
+    
+
+      <div class="row mt20" *ngIf="quizzes">
+        <div class="col-md-4" *ngFor="let q of quizzes">
+          <!-- <mat-card class="mb20">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>
+                {{ q.title }}
+              </mat-card-title>
+              <mat-card-subtitle>
+                {{ q.category.title }}
+              </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="truncate">{{ q.description }}</p>
+            </mat-card-content>
+            <mat-card-action>
+              <button mat-button color="primary">View</button>
+              <button
+                mat-button
+                color="accent"
+                [routerLink]="'/user-dashboard/instructions/' + q.qId"
+                class="ml10"
+              >
+                Start
+              </button>
+              <button mat-button color="accent">
+                Questions :{{ q.numberOfQuestions }}
+              </button>
+              <button mat-button color="accent">M.M :{{ q.maxMarks }}</button>
+            </mat-card-action>
+          </mat-card> -->
+
+
+
+          <div class="card" style="width:300px; display: inline-block;padding: 10px;margin:10px">
+            <img class="card-img-top" src="assets/images/events/1.jpg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title"> {{ q.title }}</h4>
+              <p class="card-text">{{ q.description }}</p>
+              <p class="card-text">Date :18 Aug 2021</p>
+              <a  [routerLink]="'/user-dashboard/instructions/' + q.qId" class="btn btn-primary">Start</a>
+              <button mat-button color="accent">
+               No of  Questions :{{ q.numberOfQuestions }}
+              </button><br>
+              <!-- <button mat-button color="accent">M.M :{{ q.maxMarks }}</button> -->
+              <p class="card-text" style="text-align: center;margin-top: 7px;"><b>Maximum marks {{ q.maxMarks }}</b> </p>
+
+
+              
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-12" *ngIf="quizzes.length == 0">
+          <mat-card>
+            <mat-card-content>
+              <h1>No data in this category</h1>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<app-footer style="margin-top:-30px;padding:0px"></app-footer>
+

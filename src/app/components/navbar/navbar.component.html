@@ -1,0 +1,166 @@
+<!-- <h1>this is navbar</h1> -->
+<!-- <mat-toolbar color="accent">
+  <a
+    routerLink="/"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu_book</mat-icon>
+  </a>
+  <span>Examportal</span>
+  <span class="example-spacer"></span>
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Login
+  </a>
+
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml20"
+    aria-label="Example icon-button with heart icon"
+  >
+    Register
+  </a>
+
+  <a
+    (click)="logout()"
+    *ngIf="isLoggedIn"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml20"
+    aria-label="Example icon-button with heart icon"
+  >
+    Logout
+  </a>
+
+  <button
+    *ngIf="isLoggedIn && user"
+    class="example-icon favorite-icon ml20"
+    mat-button
+    routerLink="/admin/profile"
+    aria-label="Example icon-button with heart icon"
+  >
+    {{ user.username }}
+  </button>
+</mat-toolbar> -->
+<!-- Added new Responsive navbar html and bootstrap-->
+<div class="full-width-header">
+
+  <!-- Toolbar Start -->
+  <div class="rs-toolbar" style="background-color: rgb(7, 121, 214);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="rs-toolbar-left">
+            <div class="welcome-message">
+              <i  style="color: white;"   class="fa fa-bank"></i><span>Welcome to ExamBoard</span> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="rs-toolbar-right">
+            <div class="toolbar-share-icon">
+              <ul>
+                <li><a style="color: white;" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" style="color: white;"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" style="color: white;"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#" style="color: white;"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+            <a   style="color: white;"  href="#" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Toolbar End -->
+  
+  <!--Header Start-->
+  <header id="rs-header" class="rs-header" style="background-color: cadetblue;">
+    
+ 
+
+    <!-- Menu Start -->
+    <div class="menu-area menu-sticky">
+      <div class="container">
+        <div class="main-menu">
+          <div class="row">
+            <div class="col-sm-12">
+             
+              <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
+              <nav class="rs-menu">
+                <ul class="nav-menu">
+                  <!-- Home -->
+                  <li class="current-menu-item current_page_item menu-item-has-children"> <a href="#" class="home">Home</a>
+                    
+                  </li>
+                  <!-- End Home --> 
+                                        
+                                        <!--About Menu Start-->
+                                        <li class="menu-item-has-children"> <a href="#">About Us</a>
+                                            
+                                        </li>
+                                        <!--About Menu End--> 
+
+              
+                  <!--Drop Down Pages End -->
+                                        
+                  <!--Courses Menu Start-->
+                                    <li class="menu-item-has-children"> <a href="#">Courses</a>
+                                      <ul class="sub-menu">
+                                        <li *ngIf="isLoggedIn" ><a [routerLink]="'/testList'">previous Test</a></li>
+                                        <li *ngIf="isLoggedIn"><a [routerLink]="'/testList'">Upcoming test</a></li>
+                                        <li *ngIf="isLoggedIn"><a [routerLink]="'/studyMaterial'">Study Material</a></li>
+
+                                      </ul>
+                                    </li>
+                                    <!--Courses Menu End-->
+                                        
+                  <!--Events Menu Start-->
+                  <!-- <li class="menu-item-has-children"> <a href="#">Events</a>
+                    <ul class="sub-menu">
+                      <li *ngIf="isLoggedIn" ><a [routerLink]="'/testList'">previous Test</a></li>
+                      <li *ngIf="isLoggedIn"><a [routerLink]="'/testList'">Upcoming test</a></li>
+                    </ul>
+                  </li> -->
+                  <!--Events Menu End-->
+                                        
+                                        <!-- Drop Down -->
+                  
+                  <!--End Icons -->
+                  
+                 
+                  <!--Contact Menu Start-->
+                  <li> <a  href="contact.html">Contact</a></li>
+                  <li *ngIf="!isLoggedIn"> <a  [routerLink]="'/login'"href="#">Login</a></li>
+                  <li *ngIf="!isLoggedIn"> <a   [routerLink]="'/signup'"href="#">Sign Up</a></li>
+                  <li *ngIf="isLoggedIn"> <a  (click)="logout()" [routerLink]="'/signup'"href="#">Logout</a></li>
+
+
+
+                        <!--Contact Menu End-->
+                </ul>
+              </nav>
+                                <div class="right-bar-icon rs-offcanvas-link text-right">
+                                    <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#"><i class="fa fa-search"></i></a>
+
+                                    <a id="nav-expander" class="nav-expander fixed"><i class="fa fa-bars fa-lg white"></i></a>
+                                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Menu End -->
+  </header>
+  <!--Header End-->
+
+</div>
+<!-- Navabr section end-->
